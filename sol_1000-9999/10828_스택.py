@@ -8,12 +8,15 @@
 # empty: 스택이 비어있으면 1, 아니면 0을 출력한다.
 # top: 스택의 가장 위에 있는 정수를 출력한다. 만약 스택에 들어있는 정수가 없는 경우에는 -1을 출력한다.
 
+import sys
+input = sys.stdin.readline
+
 stack = []
 
 n = int(input())
 for _ in range(n):
     inp =input().split()
-    # print(inp)
+
     if (inp[0] == "push"):
         stack.append(inp[1])
 
@@ -34,4 +37,7 @@ for _ in range(n):
             print(0)
 
     elif (inp[0] == "top"):
-        print(stack[-1])
+        if (len(stack)==0):
+            print(-1)
+        else:
+            print(stack[-1])
