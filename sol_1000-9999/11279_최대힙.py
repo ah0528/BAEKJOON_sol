@@ -14,7 +14,7 @@ for _ in range(n):
     if (inp != 0):
         heapq.heappush(heap, -inp)
     else:
-        if (len(heap) == 0):
+        if (len(heap) == 0): # if not heap:
             print(0)
         else:
             print(-heapq.heappop(heap))
