@@ -9,6 +9,7 @@ n = int(input())
 
 for _ in range(n):
     inp = input().split()
+    print(inp)
                                                                                                                                                                                              
     if (inp[0] == 'push'):
         queue.append(inp[1])
